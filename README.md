@@ -1,9 +1,7 @@
-# Decoding the f-stop: The Hidden Mathematics of Photography" — covering all 6 milestones!
-1. Derives the 2 √2​ f-stop sequence from geometry and visualizes aperture area scaling with annotated circles and bar charts.
-2. Models the exposure triangle as a linear equation in log-space (EV units), plots the full solution hyperplane for a given EV, and verifies the Sunny 16 rule mathematically.
-3. Defines a multi-term cost function with ISO, shutter, and aperture penalties, implements numerical gradient descent in log-space, and visualizes both the loss curve and the 2D cost surface.
-4. Simulates scene luminance as a log-normal distribution, implements all three metering modes as statistical estimators, and explains the 18% gray standard from first principles.
-5. Builds a full constraint satisfaction solver — encoding photographer rules as hard logical constraints — and ranks valid exposure combinations by a preference score.
-6. Wraps everything into a single exposure_advisor() function that takes a scene type and target EV, and returns a recommendation with full mathematical justification.
-
-https://colab.research.google.com/drive/1jobGcoT_IoD9UICKUW5DRJCioXeel5P1#scrollTo=QZPri_rPjC21
+# Decoding the f-stop: The Hidden Mathematics of Photography
+1 — The f-stop Sequence: Where Does √2 Come From?Derive the f-stop sequence from the geometry of a lens. Show that doubling light means multiplying aperture diameter by √2, since area scales as πr². Implement the sequence generator and visualize aperture area growth.
+2 — The Exposure Equation in Log-Space. Show that the exposure triangle becomes a linear system when expressed in logarithms (EV units). Implement EV calculations, model all valid ISO/aperture/shutter combinations as a solution space, and visualize it with linear algebra.
+3 — Calculus of Light: Optimizing Exposure. Derive the exposure value function, compute its gradient, and implement a simple gradient descent that finds the optimal settings given a target EV and constraints (e.g. max ISO, min shutter speed for motion).
+4 — Statistics of a Scene: How Cameras Meter Light. Model a scene's luminance histogram as a probability distribution. Implement the three metering modes mathematically (mean, weighted mean, mode/spot). Show why "expose to the right" works statistically.
+5 — Logic Constraints: The Photographer's Decision Tree. Encode shooting scenarios as logical constraints (sports → fast shutter, portrait → wide aperture, low light → high ISO penalty). Build a constraint satisfaction algorithm that finds valid combinations within bounds.
+6 — Putting It All Together: The Exposure Advisor. Combine all milestones into a Python function that takes scene conditions and outputs recommended settings with full mathematical justification.
