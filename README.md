@@ -1,5 +1,5 @@
 # Decoding the f-stop: The Hidden Mathematics of Photography
-1. The f-stop Sequence: Where Does √2 origins? Derive the f-stop sequence from the geometry of a lens. Show that doubling light means multiplying aperture diameter by √2, since area scales as πr². Implement the sequence generator and visualize aperture area growth.
+1. The f-stop Sequence: Where Does √2. Origins? Derive the f-stop sequence from the geometry of a lens. Show that doubling light means multiplying aperture diameter by √2, since area scales as πr². Implement the sequence generator and visualize aperture area growth.
 2. The Exposure Equation in Log-Space. Show that the exposure triangle becomes a linear system when expressed in logarithms (EV units). Implement EV calculations, model all valid ISO/aperture/shutter combinations as a solution space, and visualize it with linear algebra.
 3. Calculus of Light: Optimizing Exposure. Derive the exposure value function, compute its gradient, and implement a simple gradient descent that finds the optimal settings given a target EV and constraints (e.g. max ISO, min shutter speed for motion).
 4.  Statistics of a Scene: How Cameras Meter Light. Model a scene's luminance histogram as a probability distribution. Implement the three metering modes mathematically (mean, weighted mean, mode/spot). Show why "expose to the right" works statistically.
